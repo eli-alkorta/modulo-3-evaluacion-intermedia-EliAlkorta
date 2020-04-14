@@ -12,7 +12,6 @@ class App extends React.Component {
   }
 
   render() {
-    //  console.log(this.state.data)
     return (
       <div className="App">
         <PokeList dataList={this.state.data} />

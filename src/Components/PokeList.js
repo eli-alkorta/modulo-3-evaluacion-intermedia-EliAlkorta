@@ -3,15 +3,16 @@ import Pokemon from "./Pokemon";
 
 const PokeList = (props) => {
   return (
-    // console.log(dataList)
     <ul className="pokemons-list">
-      {props.dataList.map((pokeObject) => (
-        <Pokemon
-          id={pokeObject.id}
-          pokeImage={pokeObject.url}
-          pokeName={pokeObject.name}
-          pokeType={pokeObject.types}
-        />
+      {props.dataList.map((pokeObject, index) => (
+        <li className="pokemon__item" key={index}>
+          <Pokemon
+            id={pokeObject.id}
+            pokeImage={pokeObject.url}
+            pokeName={pokeObject.name}
+            pokeType={pokeObject.types}
+          />
+        </li>
       ))}
     </ul>
   );
